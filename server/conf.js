@@ -10,19 +10,19 @@ module.exports = {
 // DB config params
     db:{
         mongo:{
-            url:"mongodb:127.0.0.1:27017",
+            url:"mongodb:127.0.0.1",
+            port:27017,
             database:"taskmaster_volatile",
             user:"",
             password:""
         },
         mysql:{
-            url:"127.0.0.1:3306",
+            url:"127.0.0.1",
+            port:3306,
             database:"taskmaster_static",
             user:"admin",
             password:""
         }
     }
 }
-
-
 ;

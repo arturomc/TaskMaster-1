@@ -8,53 +8,30 @@ A time reporting and task management tool for software development teams
 ## Prerequisites
 * Node.js - Download and Install [Node.js](http://www.nodejs.org/download/). You can also follow [this gist](https://gist.github.com/isaacs/579814) for a quick and easy way to install Node.js and npm
 * MongoDB - Download and Install [MongoDB](http://docs.mongodb.org/manual/installation/) - Make sure `mongod` is running on the default port (27017).
-* Haraka  - Download and Install [Haraka] (http://haraka.github.io/) - Make sure haraka is running on the default port (587).
-
+* MySQL   - Download and Install [MySQL](http://www.mysql.com/downloads/) - The default username and password are assumed by TaskMaster if this change, you have to make the respective changes on server/conf.js  
 
 ### Tools Prerequisites
 * NPM - Node.js package manage; should be installed when you install node.js.
 * Bower - Web package manager. Installing [Bower](http://bower.io/) is simple when you have `npm`:
-
 ```
 $ npm install -g bower
 ```
 
-### Optional [![Built with Grunt](https://cdn.gruntjs.com/builtwith.png)](http://gruntjs.com/)
-* Grunt - Download and Install [Grunt](http://gruntjs.com).
+* Gulp - Our automation tool, make sure you install [Gulp](http://gulpjs.com/) globally and locally for gulp to work:
+```
+$ npm install -g gulp
+```
+
 
 ## Additional Packages
 * Express - Defined as npm module in the [package.json](package.json) file.
 * Mongoose - Defined as npm module in the [package.json](package.json) file.
+* Sequelize - Defined as npm module in the [package.json](package.json) file.
+* MySQL - Defined as npm module in the [package.json](package.json) file.
 * Passport - Defined as npm module in the [package.json](package.json) file.
 * AngularJS - Defined as bower module in the [bower.json](bower.json) file.
 * Twitter Bootstrap - Defined as bower module in the [bower.json](bower.json) file.
 * UI Bootstrap - Defined as bower module in the [bower.json](bower.json) file.
-
-## Quick Install
-  The quickest way to get started with MEAN is to install the `meanio` package from NPM.
-
-  Install MEAN CLI:
-
-    $ [sudo] npm install -g meanio@latest
-    $ mean init <myApp>
-    $ cd <myApp> && npm install
-
-  We recommend using [Grunt](https://github.com/gruntjs/grunt-cli) to start the server:
-
-    $ grunt
-
-  If grunt aborts because of JSHINT errors, these can be overridden with the `force` flag:
-
-    $ grunt -f
-
-  Alternatively, when not using `grunt` you can run:
-
-    $ node server
-
-  Then, open a browser and go to:
-
-    http://localhost:3000
-
 
 ## Troubleshooting
 During install some of you may encounter some issues.
@@ -69,18 +46,13 @@ Sometimes you may find there is a weird error during install like npm's *Error: 
 $ npm update -g npm
 ```
 
-* Updating Grunt:
-```
-$ npm update -g grunt-cli
-```
-
 * Updating Bower:
 ```
 $ npm update -g bower
 ```
 
 #### Cleaning NPM and Bower cache
-NPM and Bower has a caching system for holding packages that you already installed.
+NPM and Bower have a caching system for holding packages that you already installed.
 We found that often cleaning the cache solves some troubles this system creates.
 
 * NPM Clean Cache:
@@ -92,26 +64,3 @@ $ npm cache clean
 ```
 $ bower cache clean
 ```
-
- 
-## Configuration
-
-
-### Environmental Settings
-
- * __db__ - This is the name of the MongoDB database to use, and is set by default to __mean-dev__ for the development environment.
-* __app.name__ - This is the name of your app or website, and can be different for each environment. You can tell which environment you are running by looking at the TITLE attribute that your app generates.
-* __Social OAuth Keys__ - Facebook, GitHub, Google, Twitter. You can specify your own social application keys here for each platform:
-  * __clientID__
-  * __clientSecret__
-  * __callbackURL__
-
-To run with a different environment, just specify NODE_ENV as you call grunt:
-
-    $ NODE_ENV=test grunt
-
-If you are using node instead of grunt, it is very similar:
-
-    $ NODE_ENV=test node server
-
-> NOTE: Running Node.js applications in the __production__ environment enables caching, which is disabled by default in all other environments.
