@@ -1,0 +1,24 @@
+{
+    "name":"TaskMaster",
+    "version":"0.0.1",
+    "description":"",
+    "private":"true",
+    "author":"arturomc<4rturo.m.c@gmail.com>",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/JSdojo/TaskMaster.git"
+    },
+    "dependencies":{
+        "express":"latest",
+        "morgan":"latest",
+        "body-parser":"latest",
+
+        "mongoose":"latest",
+
+        "sequelize":"latest",
+        "mysql":"latest"
+    },
+    "devDependencies":{
+        "gulp":"latest"
+    }
+}
