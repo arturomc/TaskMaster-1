@@ -16,7 +16,9 @@
         "mongoose":"latest",
 
         "sequelize":"latest",
-        "mysql":"latest"
+        "mysql":"latest",
+
+        "socket.io":"latest"
     },
     "devDependencies":{
         "gulp":"latest"
